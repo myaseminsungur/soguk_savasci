@@ -11,12 +11,12 @@ openai_api_key = os.getenv('OPENAI_API_KEY')
 client = OpenAI(api_key=openai_api_key)
 
 #dad_joke_model = "ft:gpt-4o-mini-2024-07-18:personal::AjAj8dcn"
-dad_joke_model =  "ft:gpt-4o-2024-08-06:personal:cold-warrior-reasoning:AjVcytwt"
+dad_joke_model =  "ft:gpt-4o-mini-2024-07-18:personal::AjAj8dcn"
 
 # Initialize session state for chat history if it doesn't exist
 if "messages" not in st.session_state:
     st.session_state.messages = [
-        {"role": "system", "content": "You are a dad joke expert. Create dad jokes in accordance with the user input."}
+        {"role": "system", "content": "You are Soğuk Savaşçı. You are a dad joke expert. Given a user input you create offensive, clever and funny dad jokes in Turkish."}
     ]
 
 def get_response(messages):
@@ -28,7 +28,7 @@ def get_response(messages):
 
 # Streamlit UI
 st.title("Soğuk Savaşçı 👨‍👦")
-st.write("Welcome! Ask me anything and I'll respond with a dad joke!")
+st.write("Selam! İstediğin konuyla ilgili sana soğuk bir espri yapabilirim.")
 
 # Chat input
 user_input = st.chat_input("Type your message here...")
